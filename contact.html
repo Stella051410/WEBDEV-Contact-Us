@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <title>CONTACT US | Watermelon</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="media..css">
+    <link rel="shortcut icon" href="file_0000000044f861f89a00071b09c8cf49.png" type="image/x-icon">
+</head>
+ 
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="file_0000000044f861f89a00071b09c8cf49.png" alt="" width="120px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOMEPAGE</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="banner">
+            <img src="banner.png" alt="banner">
+        </div>
+    </section>
+
+ <section class="form-section">
+            <form>
+                <div class="form">
+                    <label for="firstname">First Name</label>
+                    <div class="inputype">
+                        <input type="text" id="firstname" name="first-name" placeholder="Your Name" >
+                    </div>
+                </div>
+
+                    
+                
+
+                <div class="form">
+                    <label for="lastname">Last Name</label>
+                    <div class="inputype">
+                        <input type="text" id="lastname" name="lastname" placeholder="Your Last Name" >
+                    </div>
+                </div>
+
+                    
+                
+
+                <div class="form">
+                    <label for="telnum">Telephone No.</label>
+                    <div class="inputype">
+                        <input type="tel" id="telnum" name="telnum" placeholder="Valid Format: +639634769388 or 09634667388" >
+                    </div>
+                </div>
+
+                    
+                    
+                
+                <div class="form">
+                    <label for="email">E-mail</label>
+                    <div class="inputype">
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" >
+                    </div>
+                </div>
+                
+                <div class="form">
+                    <label for="group">Organization</label>
+
+                    <div class="inputype">
+                        <input type="text" id="group" name="group" placeholder="">
+                    </div>
+                </div>
+                
+
+                <div class="form">
+                    <label for="province">Province</label>
+                    <div class="inputype">
+                      <select type="text" id="province" name="province" >
+                            <option value="" disabled selected>Select your Province</option>
+                            <option value="DDO">Davao De Oro</option>
+                            <option value="DDLN">Davao Del Norte</option>
+                            <option value="DDLS">Davao Del Sur</option>
+                            <option value="DOR">Davao Oriental</option>
+                            <option value="DOC">Davao Occidental</option>
+                        </select>
+                        
+                    </div>
+                </div>
+
+                    
+                    
+                
+                <div class="form">
+                    <label for="city">City/Town</label>
+                    <div class="inputype">
+                        <select id="city" name="city">
+                            <option value="" disabled selected>Select your Municipality or City</option>
+                            <option value="laak">Laak</option>
+                            <option value="tagum">Tagum City</option>
+                            <option value="asuncion">Asuncion</option>
+                            <option value="bansalan">Bansalan</option>
+                            <option value="cateel">Cateel</option>
+                            <option value="donmar">Don Marcelino</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                    
+                    
+                
+                <div class="form">
+                    <label for="barangay">Barangay</label>
+
+                    <div class="inputype">
+                        <select id="barangay" name="barangay">
+                            <option value="">Select your Barangay</option>
+                            <option value="manki">brgy. Mankilam</option>
+                            <option value="marikit">brgy. Marikit</option>
+                            <option value="mabuhay">brgy. Mabuhay</option>
+                            <option value="newco">brgy. New Corellia</option>
+
+                        </select>
+                    </div>  
+                </div>
+
+                                     
+                
+
+
+                <div class="form">
+                    <label for="street">Street</label>
+
+                    <div class="inputype">
+                        <input type="text" id="street" name="street" placeholder="">
+                    </div>
+                </div>
+
+                    
+                    
+                <div class="form">
+                    <label for="message">Message</label>
+                    
+                    <div class="inputype">
+                        <textarea id="message" name="message" placeholder="write something..." ></textarea>   
+                    </div>
+                </div>
+
+                <div class="btn">
+                        <button onclick="sub()">Submit</button>
+                </div>                
+                
+            </form>
+
+        </section>
+    </div>
+
+    <footer class="foot">
+        <span> Copyright &copy; 2025 Watermelon</span>
+    </footer>
+
+    <script>
+    function sub() {
+        let firstname = document.getElementById("firstname").value.trim();
+        let lastname = document.getElementById("lastname").value.trim();
+        let  telnum = document.getElementById("telnum").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let group = document.getElementById("group").value.trim();
+        let province = document.getElementById("province").value;
+        let city = document.getElementById("city").value;
+        let barangay = document.getElementById("barangay").value;
+        let street = document.getElementById("street").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        if (!firstname || !lastname  || !telnum  || !email  || !group || !province  || !city  || !barangay || !street  || !message  ) {
+            alert("Opps... You must fill in all the empty.");
+            return false;
+        }
+            
+        else {
+       
+         if(firstname.toLowerCase() === lastname.toLowerCase()) {
+            alert ("Invalid: First and Last Name are the same!!");
+        }
+
+        else if(isNaN(telnum)) {
+            alert("Valid format must be Numbers!! (ex. 09634769388)");
+        }
+
+        else if(province !== "DDLN" || city !== "tagum" || barangay !== "manki") {
+            alert(" Wrong Address! ");
+
+        }
+        
+
+        else if (message.length < 10) {
+            alert("You must message at least 10 characters long..");
+        }
+
+        else {
+            alert("Your Form has been Submitted successfully!");
+        }
+    }
+    
+}
+ 
+</script>
+
+
+</body>
+</html>
